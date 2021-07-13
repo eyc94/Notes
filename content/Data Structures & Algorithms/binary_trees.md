@@ -34,3 +34,14 @@
 - It does not have to be full, complete, or perfect.
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/bst.png "Image of Binary Search Tree")
+
+## Traversals
+- We use tree traversals to process nodes in our tree in a certain order.
+- There are 2 types of tree traversals:
+    - Depth-first: Explores a tree subtree by subtree, visiting all of a node's descendants before visiting any of its siblings (and their descendants). Moves as far down in the tree as it can go before moving across in the tree.
+    - Breadth-first: Explores a tree level by level. It visits every node at a given depth before moving downward and traversing the nodes at the next-deepest level. Moves far across the tree before moving down in the tree.
+
+#### Depth First Traversal
+
+
+#### Breadth First Traversal
