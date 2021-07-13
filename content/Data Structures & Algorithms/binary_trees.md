@@ -25,5 +25,6 @@
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/perfect_binary_tree.png "Image of Perfect Binary Tree")
 
 #### Complete Binary Tree
+- A Complete Binary Tree is perfect except for the deepest level, whose nodes are as far left as possible.
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/complete_binary_tree.png "Image of Complete Binary Tree")
