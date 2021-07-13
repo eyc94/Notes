@@ -44,6 +44,36 @@
     - Breadth-first: Explores a tree level by level. It visits every node at a given depth before moving downward and traversing the nodes at the next-deepest level. Moves far across the tree before moving down in the tree.
 
 #### Depth First Traversal
+- Move downward in tree as far as possible before moving across.
+- There are several kinds of depth-first BST traversals. We look at three kinds and use the letters N, L, and R.
+    - N: Visit/process the current node itself.
+    - L: Traverse the left subtree of the current node.
+    - R: Traverse the right subtree of the current node.
+- Each depth-first BST traversal does these 3 things but in different orders.
+    - Pre-Order Traversal: NLR - Process the current node before traversing the left and right subtrees.
+    - In-Order Traversal: LNR - Traverse the left subtree before processing the node. Then traverse the right subtree.
+    - Post-Order Traversal: LRN - Traverse both the left and right subtrees. Process the current node.
+- Visualize using the picture below:
+    - Think of walking on the dotted lines.
+    - The walk encounters each node exactly 3 times
+        - 1) Before walking the subtrees. Left of node. **Pre-Order Traversal**
+        - 2) After walking the left subtree. Bottom of node. **In-Order Traversal**
+        - 3) After walking the right subtree. Right of node. **Post-Order Traversal**
+    - Pre-Order: 64, 32, 16, 48, 56, 80, 72, 88, 84, 96.
+    - In-Order: 16, 32, 48, 56, 64, 72, 80, 84, 88, 96.
+    - Post-Order: 16, 56, 48, 32, 72, 84, 96, 88, 80, 64.
+    - Notice In-Order Traversal sorts in sorted order.
 
+![alt text](https://github.com/eyc94/Notes/blob/master/images/traversal_options.png "Traversal Options For BST")
+
+- Simple recursive implementation for all traversals. Below is for In-Order BST Traversal:
+
+```python
+inOrder(N):
+    if N is not NULL:
+        inOrder(N.left)
+        process N
+        inOrder(N.right)
+```
 
 #### Breadth First Traversal
