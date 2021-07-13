@@ -7,3 +7,13 @@
     - All values to the left of the node are smaller.
     - All values to the right of the node are larger or equal to.
     - The "equal to" condition can be on the left or right side.
+
+## General Trees
+- Elements represented as nodes.
+- Nodes contain data and a reference to another node.
+- Relationship between nodes is an edge or an arc.
+- Edges represent directed relationships.
+
+![alt text][tree]
+
+[tree]: https://github.com/eyc94/Notes/blob/master/images/general_tree.png "Image of general tree"
