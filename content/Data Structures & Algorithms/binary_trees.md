@@ -17,8 +17,8 @@
 
 #### Perfect Binary Tree
 - A Full Binary Tree where all the leaves are at the same depth.
-    - It has ```2<sup>h</sup>``` leaves (where h is the height).
-    - It has ```2<sup>h+1</sup> - 1``` total nodes (where h is the height).
+    - It has 2<sup>h</sup> leaves (where h is the height).
+    - It has 2<sup>h+1</sup> - 1 total nodes (where h is the height).
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/perfect_binary_tree.png "Image of Perfect Binary Tree")
 
