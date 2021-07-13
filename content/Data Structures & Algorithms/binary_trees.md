@@ -9,3 +9,16 @@
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/binary_tree.png "Image of Binary Tree")
 
 ## States of Binary Trees
+
+#### Full Binary Tree
+- Every interior node has exactly two children.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/full_binary_tree.png "Image of Full Binary Tree")
+
+#### Perfect Binary Tree
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/perfect_binary_tree.png "Image of Perfect Binary Tree")
+
+#### Complete Binary Tree
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/complete_binary_tree.png "Image of Complete Binary Tree")
