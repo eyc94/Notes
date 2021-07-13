@@ -77,3 +77,31 @@ inOrder(N):
 ```
 
 #### Breadth First Traversal
+- One main breadth-first traversal called **Level-Order Traversal**.
+- Processes a tree level by level.
+- Level-Order Traversal: 64, 32, 80, 16, 48, 72, 88, 56, 84, 96.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/bfs_traversal.png "Example of Breadth-First Search on BST")
+
+- Level-Order Traversal uses a queue:
+
+```java
+public static void levelOrder(Node root) {
+
+    Queue<Node> bfsQueue = new ArrayList<>();
+    bfsQueue.add(root);
+
+    while (!bfsQueue.isEmpty()) {
+        Node currentNode = bfsQueue.remove();
+        // Process node.
+        System.out.println(currentNode.val);
+
+        if (currentNode.left != null) {
+            bfsQueue.add(currentNode.left);
+        }
+        if (currentNode.right != null) {
+            bfsQueue.add(currentNode.right);
+        }
+    }
+}
+```
