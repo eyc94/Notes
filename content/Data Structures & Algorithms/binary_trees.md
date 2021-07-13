@@ -35,6 +35,8 @@
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/bst.png "Image of Binary Search Tree")
 
+![alt text](https://github.com/eyc94/Notes/blob/master/images/bst_example.png "Example of Binary Search Tree")
+
 ## Traversals
 - We use tree traversals to process nodes in our tree in a certain order.
 - There are 2 types of tree traversals:
