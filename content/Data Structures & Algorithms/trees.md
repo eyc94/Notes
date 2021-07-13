@@ -7,4 +7,4 @@
 - There are Binary Search Trees (BSTs) that have a special property.
     - All values to the left of the node are smaller.
     - All values to the right of the node are larger or equal to.
-    - `The "equal to" condition can be on the left or right side.`
+    - The "equal to" condition can be on the left or right side.
