@@ -14,6 +14,4 @@
 - Relationship between nodes is an edge or an arc.
 - Edges represent directed relationships.
 
-![alt text][tree]
-
-[tree]: https://github.com/eyc94/Notes/blob/master/images/general_tree.png "Image of general tree"
+![alt text](https://github.com/eyc94/Notes/blob/master/images/general_tree.png "Image of general tree")
