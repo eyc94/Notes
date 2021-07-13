@@ -28,3 +28,8 @@
 - A Complete Binary Tree is perfect except for the deepest level, whose nodes are as far left as possible.
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/complete_binary_tree.png "Image of Complete Binary Tree")
+
+## Binary Search Trees
+- The key of each node N is greater than all the keys in N's left subtree and less than or equal to all the keys in N's right subtree.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/bst.png "Image of Binary Search Tree")
