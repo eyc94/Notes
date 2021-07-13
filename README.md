@@ -2,5 +2,4 @@
 
 ### Data Structures & Algorithms
 
-- [Trees](./content/Data\ Structures\ \&\ Algorithms/trees.md)
-- [Google](www.google.com)
+- [Trees](./content/Data%20Structures%20&%20Algorithms/trees.md)
