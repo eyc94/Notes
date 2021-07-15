@@ -74,3 +74,25 @@ balanceFactor(N) = height(N.right) - height(N.left)
 - Implementation of the rotations in code.
 
 #### Single Rotations
+- Single rotation needed to restore height balance at a node N where N's child C is heavy in the same direction as N.
+    - Left-left imbalance: N is left-heavy and N's left child C is also left-heavy.
+    - Right-right imbalance: N is right-heavy and N's right child C is also right-heavy.
+- Can be a left or right rotation.
+- Rotation is opposite direction of the imbalance.
+    - To fix left-left imbalance at N, we do one right rotation around N.
+    - To fix right-riht imbalance at N, we do one left rotation around N.
+- We examine a single right rotation. Left rotation is just mirrored.
+    - N's balance factor is -2 and the balance factor of N's left child C is -1 or 0.
+    - This occurs after insertion into C's left subtree causing it to grow in height by 1.
+    - This occurs after removal from N's right subtree causing it to shrink in height by 1.
+    - Depicted below:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/single_right_rotation.png "Image of a single right rotation example")
+
+- In a right rotation around N, the following will happen:
+    - N will become the right child of its current left child C.
+    - C's current right child will become N's left child.
+    - If N has a parent PN, then C will replace N as PN's child. Otherwise, if N was the root of the entire tree, C will replace N as the root.
+- After the right rotation:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/post_right_rotation.png "Image of a post right rotation")
