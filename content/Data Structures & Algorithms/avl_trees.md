@@ -129,4 +129,7 @@ balanceFactor(N) = height(N.right) - height(N.left)
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_left_rotation.png "Image of a left rotation around C")
 
 - Perform a right rotation around N:
+    - G moves up to become new root of this subtree.
+    - If N originally had a parent PN, G would replace N as the child of PN after double rotation.
+    - If N was the root of the tree, G becomes the new root.
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_right_rotation.png "Image of a right rotation around N")
