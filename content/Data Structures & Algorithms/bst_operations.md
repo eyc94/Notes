@@ -109,3 +109,11 @@ remove(bst, k):
 ```
 
 ## Runtime Complexity of BST Operations
+- The main factor in the computational complexity of all three main BST operations (find, insert, remove) comes from the need to search within the tree.
+    - Find operation searches for the key.
+    - Insert operation searches for the location to insert new node.
+    - Remove searches for the query key and its in-order successor.
+- Search begins at root.
+- The total amount of work done searching in all three operations is *O(h)* where *h* is the height of the tree.
+- The height *h* can vary greatly depending on the order of insertion. It can be *log(n)* or *n*.
+- Balancing trees can help limit this to *log(n)*.
