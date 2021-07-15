@@ -48,3 +48,24 @@ balanceFactor(N) = height(N.right) - height(N.left)
 - The node moves downwards to the left.
 - Its right child with key 15 moves upwards.
 - This is a **single rotation**.
+
+## Detemining the Rotations Needed
+- Rotation (single or double) required when inserting or removing.
+- Inserting or removing leaves nodes with balance factors of -2 or 2.
+- If N has a balance factor of -2, N is *left-heavy*.
+- If N has a balance factor of 2, N is *right-heavy*.
+- Refer to the heavier of N's children as C.
+- The node C will also have a balance factor of -1, 0, or 1.
+- Below are possible scenarios.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/left_right_heavy.png "Images of a left-heavy and right-heavy node N")
+
+- If N and C are heavy in the same direction (same sign), a single rotation is needed around N in the opposite direction as N's heaviness.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/single_rotation_examples.png "Images of situations where single rotation is needed")
+
+- If N and C are heavy in the opposite directions (opposite signs), a double rotation is needed.
+- If N is left-heavy and C is right-heavy, rotate left around C then right around N.
+- If N is right-heavy and C is left-heavy, rotate right around C then left around N.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/double_rotation_examples.png "Images of situtations where double rotation is needed")
