@@ -1,6 +1,8 @@
 # AVL Trees
 
 ## Introduction
+- AVL is the initials of the tree's inventors: Adelson-Velsky and Landis.
+- Another popular is Red-Black Tree.
 - Binary Search Trees can be unbalanced.
 - To be balance, we refer to trees in which all nodes have depth around *log(n)* or less.
 - One side can have way more nodes than the other side.
@@ -28,3 +30,21 @@ balanceFactor(N) = height(N.right) - height(N.left)
 - Below are unbalanced trees.
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/bst_unbalanced.png "Images of unbalanced BSTs")
+
+## AVL Tree Rotations
+- We need to make sure the tree always exhibits height balance.
+- Check height balance of tree after each insertion and removal of an element and do rebalancing operations known as *rotations* whenever height balance is lost.
+- A **rotation** is when one node moves upwards and another moves downwards.
+    - Has a center and a direction.
+    - We can perform a **left** or a **right** rotation around this center node.
+    - Left rotations go counter-clockwise. The center moves downwards to the left. The nodes to its right moves upwards.
+    - Right rotations go clockwise. The center moves downwards to the right. The nodes to its left moves upwards.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/right_right_imbalance.png "Image of a R-R imbalance")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/left_rotation.png "Image of a successful left rotation")
+
+- The node with key 10 is the center.
+- The node moves downwards to the left.
+- Its right child with key 15 moves upwards.
+- This is a **single rotation**.
