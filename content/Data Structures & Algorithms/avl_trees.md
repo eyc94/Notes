@@ -120,16 +120,19 @@ balanceFactor(N) = height(N.right) - height(N.left)
 - Below is the visuals:
 
 - This is the left-right imbalance:
+
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_left_right_imbalance.png "Image of a left right imbalance")
 
 - Perform a left rotation around C:
     - G moves up to replace C as N's left child.
     - C moves down to become G's left child.
     - LG becomes C's right child.
+
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_left_rotation.png "Image of a left rotation around C")
 
 - Perform a right rotation around N:
     - G moves up to become new root of this subtree.
     - If N originally had a parent PN, G would replace N as the child of PN after double rotation.
     - If N was the root of the tree, G becomes the new root.
+    
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_right_rotation.png "Image of a right rotation around N")
