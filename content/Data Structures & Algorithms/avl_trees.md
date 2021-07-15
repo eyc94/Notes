@@ -96,3 +96,37 @@ balanceFactor(N) = height(N.right) - height(N.left)
 - After the right rotation:
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/post_right_rotation.png "Image of a post right rotation")
+
+## Double Rotations
+- Double rotation is needed to restore height balance at a node N where N's child C is heavy in the opposite direction as N.
+    - Left-right imbalance: N is left-heavy and N's left child C is right-heavy.
+    - Right-left imbalance: N is right-heavy and N's right child C is left-heavy.
+- Consists of two single rotations.
+    - First is always centered around N's child C.
+    - The second is always centered around N itself.
+- Fix a left-right imbalance:
+    - Apply a left rotation around C followed by a right rotation around N.
+- Fix a right-left imbalance:
+    - Apply a right rotation around C followed by a left rotation around N.
+- Picture below is fixing a left-right imbalance.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/before_rotation.png "Image before first rotation")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/first_rotation.png "Image of left rotation")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/second_rotation.png "Image of right rotation")
+
+- The first rotation creates a same side imbalance.
+- Below is the visuals:
+
+- This is the left-right imbalance:
+![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_left_right_imbalance.png "Image of a left right imbalance")
+
+- Perform a left rotation around C:
+    - G moves up to replace C as N's left child.
+    - C moves down to become G's left child.
+    - LG becomes C's right child.
+![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_left_rotation.png "Image of a left rotation around C")
+
+- Perform a right rotation around N:
+![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_right_rotation.png "Image of a right rotation around N")
