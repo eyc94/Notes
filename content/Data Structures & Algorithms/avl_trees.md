@@ -238,4 +238,14 @@ rebalance(N):
         updateHeight(N)
 ```
 
-- 
+## Time Complexity
+- Single Rotation:
+    - Constant O(1) time complexity.
+    A limited constant number of pointers is updated.
+    - The height of two nodes is updated. This is constant time because the update looks at the height of the already recorded child subtree heights.
+- At most 2 rotations (double rotation) called during each call to rebalance().
+    - rebalance() therefore runs in constant time.
+    - rebalance() called once per node while traversing up.
+    - At most rebalance() is called h times which is the height of the tree.
+    - If tree is balanced, h is log(N).
+- Overall complexity of the insert and remove operations of the AVL Tree is *O(log N)*.
