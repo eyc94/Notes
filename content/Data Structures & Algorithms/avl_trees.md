@@ -158,9 +158,84 @@ balanceFactor(N) = height(N.right) - height(N.left)
 - Pseudocode for a left rotation around N:
 
 ```
+rotateLeft(N):
+    C <- N.right
+    N.right <- C.left
+    if N.right is not NULL:
+        N.right.parent <- N
+    C.left <- N
+    N.parent <- C
+    updateHeight(N)
+    updateHeight(C)
+    return C
 ```
 
 - Pseudocode for a right rotation around N:
 
 ```
+rotateRight(N):
+    C <- N.left
+    N.left <- C.right
+    if N.left is not NULL:
+        N.left.parent <- N
+    C.right <- N
+    N.parent <- C
+    updateHeight(N)
+    updateHeight(C)
+    return C
 ```
+
+- The two functions return C, which is the new root of the subtree at which the rotation was done.
+- We use this retuned C to update N's old parent to point to C.
+
+```
+updateHeight(N):
+    N.height <- MAX(height(N.left), height(N.right)) + 1
+```
+
+- N's new height is now 1 more than the larger of either the heights of the left or right subtrees.
+- The function returns node height or -1 if node is null.
+- We can incorporate restructuring into the AVL insert and remove operations.
+
+```
+avlInsert(tree, key, value):
+    insert key, value into tree like normal BST insertion
+    N <- newly inserted node
+    P <- N.parent
+    while P is not NULL:
+        rebalance(P)
+        P <- P.parent
+```
+
+```
+avlRemove(tree, key):
+    remove key from tree like normal BST removal
+    P <- lowest modified node (e.g. parent of removed node)
+    while P is not NULL:
+        rebalance(P)
+        P <- P.parent
+```
+
+- The rebalance function:
+
+```
+rebalance(N):
+    if balanceFactor(N) < -1:
+        if balanceFactor(N.left) > 0:
+            N.left <- rotateLeft(N.left)
+            N.left.parent <- N
+        newSubtreeRoot <- rotateRight(N)
+        newSubtreeRoot.parent <- N.parent
+        N.parent.left or N.parent.right <- newSubtreeRoot
+    else if balanceFactor(N) > 1:
+        if balanceFactor(N.right) < 0:
+            N.right <- rotateRight(N.right)
+            N.right.parent <- N
+        newSubtreeRoot <- rotateLeft(N)
+        newSubtreeRoot.parent <- N.parent
+        N.parent.left or N.parent.right <- newSubtreeRoot
+    else:
+        updateHeight(N)
+```
+
+- 
