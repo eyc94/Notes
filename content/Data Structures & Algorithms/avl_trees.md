@@ -134,5 +134,33 @@ balanceFactor(N) = height(N.right) - height(N.left)
     - G moves up to become new root of this subtree.
     - If N originally had a parent PN, G would replace N as the child of PN after double rotation.
     - If N was the root of the tree, G becomes the new root.
-    
+
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/visual_right_rotation.png "Image of a right rotation around N")
+
+## Practical Implementation
+- How does the AVL Tree recognize when and where a rotation is needed?
+- How does it compute a node's balance factor?
+- Let's piece everything together.
+    - An AVL Tree will only need to be rebalanced in response to an operation that changes the structure of the tree. (Insertion or Removal).
+    - Rebalancing is a bottom-up operation. Rebalancing begins at the location where the structure changed and goes up towards the root.
+    - AVL recomputes the balance factor every time and rotates if needed.
+- We need to find a way to retrace our path. Do this by using pointers to parent nodes.
+- If we were writing a class Node to represent each node, we would need the following properties:
+    - **key**: An integer that the nodes are sorted by.
+    - **value**: Value held at node.
+    - **height**: Integer representing height of node.
+    - **left**: Left child node.
+    - **right**: Right child node.
+    - **parent**: Parent node.
+    - We use **null** to indicate a node does not have a parent or child.
+    - Root's parent is always null.
+
+- Pseudocode for a left rotation around N:
+
+```
+```
+
+- Pseudocode for a right rotation around N:
+
+```
+```
