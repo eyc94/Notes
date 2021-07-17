@@ -30,8 +30,32 @@
 - We keep track of the last filled position and the next open open.
 
 ## Heap Operations
+- A min (or max) heap is maintained through the addition and removal of nodes by percolation.
+- This moves nodes up and down based on their priority value.
 
 #### Adding
+- When adding we place new node into next open spot.
+- Percolate up until the value is less than (or greater than, for a max heap) both of its children.
+- Consider adding node with value 7 to the min heap above.
+- First place in next open spot:
 
+![alt text](https://github.com/eyc94/Notes/blob/master/images/add_min_heap_one.png "Image of first step in adding to min heap")
+
+- Percolate up the tree with the following method:
+
+```
+while new priority value < parent's priority value:
+    swap new node with parent
+```
+
+- Node 7 swaps with node 10.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/add_min_heap_two.png "Image of second step in adding to min heap")
+
+- Node 7 swaps with node 8.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/add_min_heap_three.png "Image of third step in adding to min heap")
+
+- After all swaps, the property of a min heap is restored.
 
 #### Removing
