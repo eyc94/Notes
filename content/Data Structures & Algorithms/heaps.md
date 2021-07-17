@@ -111,4 +111,29 @@ while priority > smallest child priority:
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/last_first_open.png "Image of heap highlighting the last and first open slots")
 
 #### Inserting Into an Array Based Heap
+- Follow this:
+    1. Put new element at the end of the array.
+    2. Find the new element's parent index ((i - 1) / 2)
+    3. Compare the value of the inserted element with the value of its parent.
+    4. If the value of the parent is greater than new node value, swap the elements in the array and repeat step 2.
+        - Do not repeat if element has reached beginning of array.
 
+![alt text](https://github.com/eyc94/Notes/blob/master/images/insert_heap_example.png "Image of a proper heap")
+
+- Let's add node 7 to the heap above:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/insert_seven_to_heap.png "Image of inserting node 7 to heap")
+
+- Compute the index of node 7's parent:
+    - ((11 - 1) / 2) -> 5.
+    - Compare 7 with the value found.
+    - 7 is less than 10, so swap.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/swap_seven_ten.png "Image of swapping 7 and 10")
+
+- Repeat and compeare 7 to 8 at index ((5 - 1) / 2) -> 2.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/swap_seven_eight.png "Image of swapping 7 and 8")
+
+- Finally, compare 7's new parent node 2 at index ((2 - 1) / 2 -> 0).
+- We stop now because 2 is less than 7.
