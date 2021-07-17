@@ -59,3 +59,31 @@ while new priority value < parent's priority value:
 - After all swaps, the property of a min heap is restored.
 
 #### Removing
+- The root node is the lowest priority value (min heap) or highest priority value (max heap).
+- The operations **first()** and **remove_first()** access and remove the root node.
+- How to replace the root node?
+    - Replace it with the last element in the heap.
+    - Fix the heap by percolating that node down.
+
+- For example, look at the very original min heap. We want to remove the root node and replace with node 32.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_min_heap_one.png "Image of first step in removing from min heap")
+
+- Last node is removed after it replaces root:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_min_heap_two.png "Image of second step in removing from min heap")
+
+- We percolate the node 32 down using this method:
+
+```
+while priority > smallest child priority:
+    swap with smallest child
+```
+
+- Node 32 follows this path depicted:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_min_heap_three.png "Image of third step in removing from min heap")
+
+- Our resulting heap:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_min_heap_four.png "Image of fourth step in removing from min heap")
