@@ -87,3 +87,28 @@ while priority > smallest child priority:
 - Our resulting heap:
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_min_heap_four.png "Image of fourth step in removing from min heap")
+
+## Heap Implementation
+- We can use an array (or dynamic array).
+- Works with any binary tree, not just heaps.
+- Less space efficient if not a complete tree.
+
+#### The Overview
+- Root node of heap is at index **0**.
+- Left and right children of a node at index **i** are stored in indices **2 * i + 1** and **2 * i + 2**, respectively.
+- Parent of a node at index **i** is **(i - 1) / 2** (floor division).
+- Example below:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heap_to_array.png "Image of a heap to array conversion")
+
+- Complete trees are easy to implement. If the tree was not complete, it would be difficult like below:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/inc_heap_to_array.png "Image of an incomplete heap to array conversion")
+
+- Keep track of the last element and first open spot in the array representation of heap.
+    - This is the last element in array and the following empty spot.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/last_first_open.png "Image of heap highlighting the last and first open slots")
+
+#### Inserting Into an Array Based Heap
+
