@@ -70,4 +70,7 @@ index = hash % array_size
 ```
 
 ## Perfect and Minimally Perfect Hash Functions
-- 
+- **Perfect Hash** function is one that results in no collisions.
+- **Minimally Perfect** hash function is one that results in no collisions for a table size that exactly equals the number of elements.
+- Minimally perfect hash functions rarely exist.
+- We have to look at resolving hash conflicts.
