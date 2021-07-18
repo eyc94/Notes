@@ -120,3 +120,53 @@ index = hash % array_size
 - Worse case is **O(N)** because all elements can be in the same bucket.
 
 #### Collision Resolution With Open Addressing
+- Probe for an empty spot.
+- Procedure:
+    - Use hash function to compute initial index *i* for the element.
+    - If hash table at index *i* is empty, insert element there and stop.
+    - If not, increment *i* to the next index in the problem sequence (e.g. *i + 1*) and repeat.
+- Probing schemes:
+    - Linear probing: *i = i + 1*
+    - Quadratic probing: *i = i + j2* (j = 1, 2, 3, ...)
+    - Double hashing: *i = i + j * h2(key)* (j = 1, 2, 3, ...)
+        - h2 is a second, independent hash function
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/address_example.png "Image of open address example 1")
+
+- Searching is the same.
+- Probe until you find it or until there's an empty spot in which case it doesn't exist.
+- Reach the end of the array? Wrap around to the beginning.
+- If we removed an element, this could disrupt probing.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/address_remove_example.png "Image of an example of disruption after removing element")
+
+- To get around this, we put a tombstone value, **__TS__** after removing.
+- This does not halt search when encountering an empty spot.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_tombstone_example.png "Image of example of tombstone value")
+
+- We can run into the problem of clustering.
+- Too many elements are placed next to each other.
+- Below represents a clustering probability:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/cluster_probability.png "Image of cluster probability")
+
+- Quadratic probing and double hashing can reduce clusters.
+- A table's load factor cannot exceed 1.
+- Desired to maintain a low load factor.
+
+##### Complexity Analysis of Open Address Hashing
+- Assume truly uniform hashing.
+- To insert an item into table, the probability that first probe is successful is: **(m - n) / m**.
+    - **m** total slots and **n** filled slots. **m - n** open spots.
+    - **p** is the probability so **p = (m - n) / m**.
+- If first probe fails, the probability of second probe succeeding is **(m - n) / (m - 1)**.
+    - There are still **m - n** remaining open slots.
+    - We only have a total of **m - 1** slots to look at because we examined one already.
+- If first two fail, the probability of third succeeding is **(m - n) / (m - 2)**.
+    - There are still **m - n** open slots.
+    - We only have a total of **m - 2** slots to look at since we looked at 2 already.
+- This keeps going.
+- For each probe, the probability of success is at least **p** because **(m - n) / (m - c) >= (m - n) / m = p**.
+- Expected number of probes for any operation is **O(1 / (1 - λ))**.
+- For small load factors, our operations will be O(1) on average.
