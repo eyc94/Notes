@@ -137,3 +137,26 @@ while priority > smallest child priority:
 
 - Finally, compare 7's new parent node 2 at index ((2 - 1) / 2 -> 0).
 - We stop now because 2 is less than 7.
+
+#### Removing From an Array Based Heap
+- To access the minimum element, return value of first element in the array.
+- Removing is more involved:
+    1. Remember the value of first element.
+    2. Swap first element with the last element. Remove the last element.
+    3. If the array is not empty, find the indices of the children of the replacement element
+        - **2 * i + 1** and **2 * i + 2**.
+        - If both elements fall beyond bounds, stop.
+    4. Compare the value of replacement with the minimum value of its two children.
+    5. If replacement element's value is less than minimum child's value, swap the two and repeat from step 3.
+
+- Example below shows removing the root node.
+- Replace the root (first element) with the last element and remove the last element.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_step_one.png "Image of step 1 in removing root")
+
+- Percolate the node 32 down the array while comparing it to its minimum value child.
+- Swap with the minimum value childs until it reaches its correct place.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_steps.png "Image of the remaining steps in the remove operation")
+
+#### Building a Heap From an Unsorted Array
