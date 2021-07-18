@@ -160,3 +160,19 @@ while priority > smallest child priority:
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/remove_steps.png "Image of the remaining steps in the remove operation")
 
 #### Building a Heap From an Unsorted Array
+- To build heap from unsorted array, we can use method similar to downward percolation of removal operation.
+- Let's look at a random array as a heap:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/arbitrary_array_to_heap.png "Image of an array with values randomly distributed represented as a tree")
+
+- Not a proper heap, but we can break it down.
+- Each leaf subtree is a proper heap (of one element).
+- If we percolate down the first non-leaf element, the subtree rooted at that element's original position will be a proper heap.
+- First non-leaf element from the back of the array is at **n / 2 - 1** (using floor division).
+- Move backwards one element at a time from the first non-leaf element.
+- Each time we percolate an element down, the subtree rooted at that element's original position will be a proper heap.
+- Once we percolate the root element down, the entire array will represent a proper heap.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/final_proper_heap.png "Image of final proper heap")
+
+## Heapsort
