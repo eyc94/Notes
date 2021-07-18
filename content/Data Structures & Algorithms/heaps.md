@@ -176,3 +176,33 @@ while priority > smallest child priority:
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/final_proper_heap.png "Image of final proper heap")
 
 ## Heapsort
+- We can implement an efficient **O(n log n)**, in-place, sorting algorithm called **heapsort**.
+- First builds a heap out of the array using the procedure above.
+- To complete the sort:
+    - Keep a running counter *k* that is initialized to one less than the size of the array (i.e. the last element).
+    - Instead of replacing the first element (min) with the last element (the *k*th), we swap those two in the array.
+        - The array itself remains the same size, and we decrement *k*.
+    - Percolate the replacement down to correct spot and stop at *k*th element.
+        - The heap is shrinking by 1 at each iteration.
+- Repeat until *k* reaches start of the array.
+- Maintains 2 properties:
+    - The elements of the array beyond *k* are sorted. The min element is at the end of the array.
+    - The array through *k* always forms a heap. The min at the beginning.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heapsort_diagram.png "Image of heap and sorted portions of heapsort process")
+
+- Heapsort runs as follows, with *k* initialized to the last element in the array:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heapsort_one.png "Image of step 1 of heapsort")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heapsort_two.png "Image of step 2 of heapsort")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heapsort_three.png "Image of step 3 of heapsort")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heapsort_four.png "Image of step 4 of heapsort")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heapsort_five.png "Image of step 5 of heapsort")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heapsort_six.png "Image of step 6 of heapsort")
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/heapsort_seven.png "Image of step 7 of heapsort")
