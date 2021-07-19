@@ -115,3 +115,41 @@ reachable: {LAX, MSP, ORD, PDX, SEA, SFO, STL}
 
 - Can be implemented by adjacency list or adjacency matrix.
 - Could use a queue instead of a stack.
+
+#### Depth-First Search and Breadth-First Search
+- Above example was DFS.
+- DFS explores as far as possible before trying another path.
+- DFS can be implemented using a stack
+- If we replace the stack with a queue, it results in a BFS.
+- BFS explores a tree by traveling all paths to a given depth, then traveling all those paths one step deeper, then traveling them one step deeper, etc.
+- BFS visits neighbors before going down.
+- General algorithm for DFS and BFS below. For DFS, use stack. For BFS, use queue.
+
+```
+1. Initialize an empty set of visited vertices.
+2. Initialize an empty stack (DFS) or queue (BFS). Add v<sub>i</sub> to the stack/queue.
+3. If the stack/queue is not empty, pop/dequeue a vertex v.
+4. Perform any desired processing on v.
+    - e.g. Check if v meets a desired condition.
+5. (DFS only): If v is not in the set of visited vertices:
+    - Add v to the set of visited vertices.
+    - Push each vertex that is direct successor of v to the stack.
+6. (BFS only):
+    - Add v to the set of visited vertices.
+    - For each direct successor v' of v:
+        - If v' is not in the set of visited vertices, enqueue it into the queue.
+7. Repeat from 3.
+```
+
+- Both can be used to find start to finish in a maze.
+- Comparisons between DFS and BFS:
+    - DFS is backtracking search.
+    - In an infinite graph, DFS gets lost in an infinite path and won't find a solution.
+    - BFS is complete and optimal. If a solution exists, BFS is guaranteed to find it, and it will find the shortest path to that solution.
+    - BFS may take a long time if solution is deep in graph.
+    - DFS may find a deep solution more quickly.
+    - Both algorithms have **O(V)** space complexity in worst case.
+    - BFS may take more space in practice, however.
+    - If graph has a high branching factor, BFS can take a lot of memory to maintain all of the paths.
+
+#### Dijkstra's Algorithm: Single Source Lowest-Cost Paths
