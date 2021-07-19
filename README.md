@@ -11,4 +11,5 @@
 - [Graphs](./content/Data%20Structures/graphs.md)
 
 ### Algorithms
+- [Insertion Sort](./content/Algorithms/insertion_sort.md)
 - [Asymptotic Analysis](./content/Algorithms/)
