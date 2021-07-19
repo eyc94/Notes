@@ -153,3 +153,29 @@ reachable: {LAX, MSP, ORD, PDX, SEA, SFO, STL}
     - If graph has a high branching factor, BFS can take a lot of memory to maintain all of the paths.
 
 #### Dijkstra's Algorithm: Single Source Lowest-Cost Paths
+- Finds the shortest/lowest-cost path from a specified vertex in a graph to all other reachable vertices in the graph.
+- From airports graph, you can also find the cheapest cost to reach each of the airports.
+- Structured like DFS and BFS. However, use priority queue.
+    - Priority values used in queue correspond to the cumulative distance to each vertex added to the PQ.
+    - We are always exploring the remaining node with the minimum cumulative cost.
+- Algorithm which begins with some source vertex v<sub>s</sub>.
+    - Initialize empty map/hash table representing visited vertices.
+        - Key is the vertex *v*.
+        - Value is the min distance *d* to vertex *v*.
+    - Initialize an empty PQ, and insert *v<sub>s</sub>* with distance (priority) 0.
+    - While PQ is not empty:
+        - Remove first element (a vertex) from the PQ and assign it to *v*.
+        - Let *d* be *v*'s distance (priority).
+        - If *v* is not in the map of visited vertices:
+            - Add *v* to the visited map with distance/cost *d*.
+            - For each direct successor *v<sub>i</sub>* of *v*:
+                - Let *d<sub>i</sub>* equal the cost/distance associated with edge *(v, v<sub>i</sub>)*.
+                - Insert *v<sub>i</sub>* to the PQ with distance (priority) *d + d<sub>i</sub>*.
+
+- This version only keeps track of the min distance to each vertex, but it can be easily modified to keep track of the min-distance path, too.
+    - Do this by augmenting visited vertex map and the PQ to keep track of the vertex previous to each one added.
+
+- Complexity of this version is **O(|E| log |E|)**.
+- Inner loop executed at most |E| times.
+- Cost of the instructions inside the loop is **O(log |E|)**.
+- Inner cost comes from inserting into the PQ.
