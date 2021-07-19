@@ -1,6 +1,6 @@
 # Notes
 
-### Data Structures & Algorithms
+### Data Structures
 
 - [Trees](./content/Data%20Structures%20&%20Algorithms/trees.md)
     - [Binary Trees & BSTs](./content/Data%20Structures%20&%20Algorithms/binary_trees.md)
@@ -9,3 +9,5 @@
     - [Heaps](./content/Data%20Structures%20&%20Algorithms/heaps.md)
 - [Hash Maps](./content/Data%20Structures%20&%20Algorithms/hashmaps.md)
 - [Graphs](./content/Data%20Structures%20&%20Algorithms/graphs.md)
+
+### Algorithms
