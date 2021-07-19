@@ -39,3 +39,26 @@ INSERTION-SORT(A)
     - **Initialization**: It is true prior to the first iteration of the loop.
     - **Maintenance**: If it is true before an iteration of the loop, it remains true before the next iteration.
     - **Termination**: When the loop terminates, the invariant gives us a useful property that helps show that the algorithm is correct.
+
+## Analysis of Insertion Sort
+- Time taken by the sort depends on the input.
+- Depends also on how nearly sorted they already are.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/insertion_sort_analysis_one.png "Image of insertion sort analysis 1")
+
+- The running time of the algorithm is the sum of running times for each statement.
+- To compute T(N), the running time of INSERTION-SORT on an input of *n* values, we sum the products of the *cost* and *times* columns:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/insertion_sort_analysis_two.png "Image of insertion sort analysis 2")
+
+- Best case comes when array is already sorted, so:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/insertion_sort_best_case.png "Image of best case insertion sort analysis")
+
+- This is a **linear function** of *n*.
+- Worst case is when the array is reverse sorted.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/insertion_sort_worst_case.png "Image of worst case insertion sort analysis")
+
+- This is a **quadratic function** of *n*.
+- The worst-case running time is &Theta;(n<sup>2</sup>).
