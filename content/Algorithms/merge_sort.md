@@ -59,3 +59,7 @@ MERGE-SORT(A, p, r)
 ```
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/mergesort_bottom_up.png "Example of steps of mergesort")
+
+## Analysis of Merge Sort
+- Runtime is &Theta;(N lg N).
+- This is far better than Insertion Sort
