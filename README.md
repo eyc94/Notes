@@ -12,4 +12,5 @@
 
 ### Algorithms
 - [Insertion Sort](./content/Algorithms/insertion_sort.md)
+- [Merge Sort](./content/Algorithms/merge_sort.md)
 - [Asymptotic Analysis](./content/Algorithms/asymptotic_analysis.md)
