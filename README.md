@@ -12,4 +12,4 @@
 
 ### Algorithms
 - [Insertion Sort](./content/Algorithms/insertion_sort.md)
-- [Asymptotic Analysis](./content/Algorithms/)
+- [Asymptotic Analysis](./content/Algorithms/asymptotic_analysis.md)
