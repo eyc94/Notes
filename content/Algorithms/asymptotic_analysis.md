@@ -1,5 +1,7 @@
 # Asymptotic Analysis
 
+- Theoretical study of computer program performance and resource usage.
+
 ## Big-Oh
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/oh_graph.png "Graph of Big-Oh")
