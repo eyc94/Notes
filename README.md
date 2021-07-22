@@ -11,10 +11,10 @@
 - [Graphs](./content/Data%20Structures/graphs.md)
 
 ### Algorithms
-- Sorting
+- [Sorting](./content/Algorithms/sorting.md)
     - [Insertion Sort](./content/Algorithms/insertion_sort.md)
     - [Merge Sort](./content/Algorithms/merge_sort.md)
-- Searching
+- [Searching](./content/Algorithms/searching.md)
 - [Divide & Conquer](./content/Algorithms/divide_and_conquer.md)
     - [Merge Sort](./content/Algorithms/merge_sort.md)
 - [Asymptotic Analysis](./content/Algorithms/asymptotic_analysis.md)
