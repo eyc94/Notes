@@ -62,7 +62,7 @@ CUT-ROT(p, n)
         - When solving subproblems, we have solved and saved the smaller subproblems, reducing work.
     - Usually both have same running times.
 
-- Code for top-down CUT-ROD procedure with memoization:
+### Code For Top-Down CUT-ROD Procedure With Memoization
 
 ```
 MEMOIZED-CUT-ROD(p, n)
@@ -94,7 +94,7 @@ MEMOIZED-CUT-ROD-AUX(p, n, r)
     - Line 8 saves the computed value in the aux array.
     - Line 9 returns the computed value.
 
-- Code for bottom-up method:
+### Code For Bottom-Up Method
 
 ```
 BOTTOM-UP-CUT-ROD(p, n)
