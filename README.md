@@ -14,6 +14,7 @@
 - [Sorting](./content/Algorithms/sorting.md)
     - [Insertion Sort](./content/Algorithms/insertion_sort.md)
     - [Merge Sort](./content/Algorithms/merge_sort.md)
+    - [Quick Sort](./content/Algorithms/quick_sort.md)
 - [Searching](./content/Algorithms/searching.md)
     - [Binary Search](./content/Algorithms/binary_search.md)
 - [Divide & Conquer](./content/Algorithms/divide_and_conquer.md)
@@ -21,3 +22,4 @@
     - [Merge Sort](./content/Algorithms/merge_sort.md)
     - [Maximum Subarray](./content/Algorithms/maximum_subarray.md)
 - [Asymptotic Analysis](./content/Algorithms/asymptotic_analysis.md)
+- [Recursion](./content/Algorithms/recursion.md)
