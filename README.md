@@ -15,6 +15,7 @@
     - [Insertion Sort](./content/Algorithms/insertion_sort.md)
     - [Merge Sort](./content/Algorithms/merge_sort.md)
 - [Searching](./content/Algorithms/searching.md)
+    - [Binary Search](./content/Algorithms/binary_search.md)
 - [Divide & Conquer](./content/Algorithms/divide_and_conquer.md)
     - [Recurrence](./content/Algorithms/recurrence.md)
     - [Merge Sort](./content/Algorithms/merge_sort.md)
