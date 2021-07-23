@@ -16,6 +16,7 @@
     - [Merge Sort](./content/Algorithms/merge_sort.md)
 - [Searching](./content/Algorithms/searching.md)
 - [Divide & Conquer](./content/Algorithms/divide_and_conquer.md)
+    - [Recurrence](./content/Algorithms/recurrence.md)
     - [Merge Sort](./content/Algorithms/merge_sort.md)
     - [Maximum Subarray](./content/Algorithms/maximum_subarray.md)
 - [Asymptotic Analysis](./content/Algorithms/asymptotic_analysis.md)
