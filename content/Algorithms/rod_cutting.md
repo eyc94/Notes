@@ -125,3 +125,41 @@ BOTTOM-UP-CUT-ROD(p, n)
 - Below is an example:
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/subproblem_graph.png "Image of subproblem graph")
+
+## Reconstructing A Solution
+- Our DP approach above returns *an* optimal solution.
+- They don't return a list of pieces.
+- We can have our DP approach record not only the optimal *value* but also a *choice* that led to the optimal value.
+
+### Extended Version of Bottom-Up Method
+- Computes for each rod size *j* not only the max revenue *r<sub>j</sub>* but also *s<sub>j</sub>*, the optimal size of the first piece to cut off.
+
+```
+EXTENDED-BOTTOM-UP-CUT-ROD(p, n)
+1.  let r[0..n] and s[0..n] be new arrays
+2.  r[0] = 0
+3.  for j = 1 to n
+4.      q = -infinity
+5.      for i = 1 to n
+6.          if q < p[i] + r[j - i]
+7.              q = p[i] + r[j - i]
+8.              s[j] = i
+9.      r[j] = q
+10. return r and s
+```
+
+- Similar to BOTTOM-UP-CUT-ROD except it creates an array *s*.
+- It updates *s\[j\]* in line 8 to hold optimal size *i* of the first piece to cut off when solving a subproblem of size *j*.
+- The next procedure takes the table *p* and a rod size *n* and called EXTENDED-BOTTOM-UP-CUT-ROD to compute the array *s\[1..n\]* of optimal first-piece sizes and then prints out the complete list of piece sizes in an optimal decomposition of a rod of length *n*:
+
+```
+PRINT-CUT-ROD-SOLUTION(p, n)
+1.  (r, s) = EXTENDED-BOTTOM-UP-CUT-ROD(p, n)
+2.  while n > 0
+3.      print s[n]
+4.      n = n - s[n]
+```
+
+- Example of calling EXTENDED-BOTTOM-UP-CUT-ROD(p, 10) would return:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/extended_cut_rod_example.png "Image of rod cutting example extended table")
