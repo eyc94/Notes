@@ -24,3 +24,4 @@
 - [Asymptotic Analysis](./content/Algorithms/asymptotic_analysis.md)
 - [Recursion](./content/Algorithms/recursion.md)
 - [Dynamic Programming](./content/Algorithms/dynamic_programming.md)
+    - [Rod Cutting](./content/Algorithms/rod_cutting.md)
