@@ -117,3 +117,11 @@ BOTTOM-UP-CUT-ROD(p, n)
     - Line 8 returns the value.
 
 - Runtimes of the top-down memoization and bottom-up method are the same at &Theta;(N<sup>2</sup>).
+
+## Subproblem Graphs
+- In DP, we should understand the set of subproblems involved and how subproblems depend on one another.
+- A **subproblem graph** is a directed graph containing one vertex for each distinct subproblem.
+- Subproblem graph has a directed edge from *x* to *y* if determining *x* depends on *y*.
+- Below is an example:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/subproblem_graph.png "Image of subproblem graph")
