@@ -74,3 +74,25 @@ LCS-LENGTH(X, Y)
     - Each "top-left_arrow" corresponds to an entry for which x<sub>i</sub> = y<sub>j</sub> is a member of an LCS.
 
 ## Step 4: Constructing an LCS
+- The *b* table returned by the function above allows us to construct an LCS of *X* and *Y*.
+- Begin at *b\[m, n\]* and follow the arrows.
+- When you encounter a "top_left_arrow" in *b\[i, j\]*, it implies x<sub>i</sub> = y<sub>j</sub> is an element of the LCS that LCS-LENGTH found.
+- This produces the LCS in reverse order.
+- The following code prints the LCS of *X* and *Y* in the proper order.
+- The call to the function is PRINT-LCS(b, X, X.length, Y.length).
+
+```
+PRINT-LCS(b, X, i, j)
+1.  if i == 0 or j == 0
+2.      return
+3.  if b[i, j] == "top_left_arrow"
+4.      PRINT-LCS(b, X, i - 1, j - 1)
+5.      print xi
+6.  elseif b[i, j] == "top_arrow"
+7.      PRINT-LCS(b, X, i - 1, j)
+8.  else PRINT-LCS(b, X, i, j - 1)
+```
+
+- This takes time O(M + N).
+
+#### Improving the Code
