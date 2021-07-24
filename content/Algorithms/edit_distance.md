@@ -35,3 +35,46 @@
 - Edit distance satisfies the following recurrence:
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/edit_distance_recurrence.png "Image of edit distance recurrence")
+
+## Dynamic Programming
+- Since we have a recurrence, we can transform it into a DP algorithm.
+    - **Subproblems**: Each recursive subproblem is indentified by two indices 0 <= i <= m and 0 <= j <= n.
+    - **Memoization structure**: So we can memoize all possible values of Edit(i, j) in a two-dimensional array Edit[0..m, 0..n].
+    - **Dependencies**: Each entry Edit[i, j] depends only on its three neighboring entries Edit[i - 1, j], Edit[i,j - 1], and Edit[i - 1, j - 1].
+    - **Evaluation order**: If the array is filled in standard row-major order (row by row top down from left to right), then whenever we reach an entry, all the entries that it depends on are already available.
+
+    ![alt text](https://github.com/eyc94/Notes/blob/master/images/edit_distance_eval_order.png "Image of edit distance evaluation order")
+
+    - **Space & Time**: Memoization structure uses O(MN) space. Can compute each entry Edit[i, j] in O(1) time once we know its predecessors, so the overall algorithm runs in O(MN) time.
+
+```
+EDIT-DISTANCE(A[1..m], B[1..n])
+1.  for j <- 0 to n
+2.      Edit[0, j] <- j
+3.  for i <- 1 to m
+4.      Edit[i, 0] <- i
+5.      for j <- 1 to n
+6.          ins <- Edit[i, j - 1] + 1
+7.          del <- Edit[i - 1, j] + 1
+8.          if A[i] = B[j]
+9.              rep <- Edit[i - 1, j - 1]
+10.         else
+11.             rep <- Edit[i - 1, j - 1] + 1
+12.         Edit[i, j] <- min{ins, del, rep}
+13. return Edit[m, n]
+```
+
+- Memoization table for words ALGORITHM and ALTRUISTIC is shown below:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/edit_distance_memo.png "Image of edit distance memoization table")
+
+- Bold numbers indicate places where characters in the two strings are equal.
+- Edit distance is 6.
+- The arrows in the table indicate which predecessor(s) define each entry.
+    - Horizontal arrow = deletion.
+    - Vertical arrow = insertion.
+    - Diagonal = substitution.
+    - Bold red diagonal arrows indicate "free" substitutions of a letter for itself.
+    - Any path from top-left to bottom right with arrows represents an optimal edit sequence between two strings.
+
+- Can construct the shortest edit sequence in O(N + M) time.
