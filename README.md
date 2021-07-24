@@ -28,3 +28,4 @@
     - [Longest Common Subsequence](./content/Algorithms/longest_common_subsequence.md)
     - [Fibonacci Numbers](./content/Algorithms/fibonacci_numbers.md)
     - [Longest Increasing Subsequence](./content/Algorithms/longest_increasing_subsequence.md)
+    - [Edit Distance](./content/Algorithms/edit_distance.md)
