@@ -50,3 +50,13 @@
 - Cannot use DP to solve *Unweighted Longest Simple Path*.
 
 ### Overlapping Subproblems
+- The space of subproblems must be "small" in the sense that a recursive algorithm for the problem solves the same subproblems over and over, rather than always generating new subproblems.
+- The total number of distinct subproblems is typically polynomial in the input size.
+- When a recursive algorithm revisits the same problem repeatedly, we say that the optimization problem has **overlapping subproblems**.
+- Solve each subproblem once and store in a table to look up when needed using constant time lookup.
+
+## Memoization
+- Top-down strategy while having efficiency of bottom-up approach.
+- Memoize natural, but inefficient, recursive algorithm.
+- A memoized recursive algorithm maintains an entry in a table for the solution to each subproblem.
+- Look up the value stored in table when we encounter problem again.
