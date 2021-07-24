@@ -12,3 +12,11 @@
 - In the **longest-common-subsequence problem**, we are given two sequences X = (x<sub>1</sub>, x<sub>2</sub>,...,x<sub>m</sub>) and Y = (y<sub>1</sub>, y<sub>2</sub>,...,y<sub>n</sub>) and wish to find a maximum-length common subsequence of X and Y.
 
 ## Step 1: Characterizing A Longest Common Subsequence
+- Brute force is to find all subsequences of X and check each subsequence to see whether it is also a subsequence of Y, keeping track of the longest subsequence we find.
+- This approach requires exponential time
+- The LCS problem has an optimal-substructure property.
+- If X = (A, B, C, B, D, A, B), then X<sub>4</sub> = (A, B, C, B)
+- X<sub>0</sub> is the empty sequence.
+- An LCS of two sequences contains within it an LCS of prefixes of the two sequences. Thus, the LCS problem has an optimal substructure property.
+
+## Step 2: A Recursive Solution
