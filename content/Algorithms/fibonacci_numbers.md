@@ -39,3 +39,16 @@ MEM-FIBO(n)
 - This algorithm performs only O(N) additions.
 
 ## Dynamic Programming: Fill Deliberately
+- Replaced memoized recurrence with a for-loop that fills the array in order.
+- ITER-FIBO below uses O(N) additions and stores O(N) integers.
+
+```
+ITER-FIBO(n)
+1.  F[0] <- 0
+2.  F[1] <- 1
+3.  for i <- 2 to n
+4.      F[i] <- F[i - 1] + F[i - 2]
+5.  return F[n]
+```
+
+## Don't Remember Everything After All
