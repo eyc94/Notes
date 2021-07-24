@@ -96,3 +96,9 @@ PRINT-LCS(b, X, i, j)
 - This takes time O(M + N).
 
 #### Improving the Code
+- We can get rid of the *b* table altogether
+- *c\[i, j\]* depends on only 3 other *c* table entries: *c\[i - 1, j - 1\]*, *c\[i - 1, j\]*, and *c\[i, j - 1\]*.
+- Given *c\[i, j\]*, we can determine in O(1) time which of these three values was used to compute *c\[i, j\]* without looking at *b* table.
+- We can reconstruct an LSC in O(M + N) time using a procedure similar to PRINT-LCS.
+- We decrease space by &Theta;(MN) using this method. It doesn't matter really though because we still need &Theta;(MN) for table *c*.
+- We can improve on space if just trying to get the length of LCS. If we need to make the path of LCS, we need more information.
