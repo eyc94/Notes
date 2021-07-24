@@ -36,3 +36,18 @@ FAST-LIS(A[1..n])
 ```
 
 ## Second Recurrence: What's Next?
+- We can memoize the recurrence into a one-dimensional array LISfirst\[1..n\].
+- Each entry LISfirst\[i\] depends on entries\[j\] with j > i.
+- We can fill the array in decreasing index order.
+- The resulting DP algorithm runs in O(N<sup>2</sup>) time and uses O(N) space.
+
+```
+FAST-LIS2(A[1..n])
+1.  A[0] = -infinity
+2.  for i <- n downto 0
+3.      LISfirst[i] <- 1
+4.      for j <- i + 1 to n
+5.          if A[j] > A[i] and 1 + LISfirst[j] > LISfirst[i]
+6.              LISfirst[i] <- 1 + LISfirst[j]
+7.  return LISfirst[0] - 1
+```
