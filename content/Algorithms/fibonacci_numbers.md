@@ -52,3 +52,16 @@ ITER-FIBO(n)
 ```
 
 ## Don't Remember Everything After All
+- We don't need to keep all data.
+- Just keep the newest two elements in the array because each new number relies on the previous two numbers.
+
+```
+ITER-FIBO2(n)
+1.  prev <- 1
+2.  curr <- 0
+3.  for i <- 1 to n
+4.      next <- curr + prev
+5.      prev <- curr
+6.      curr <- next
+7.  return curr
+```
