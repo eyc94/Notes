@@ -19,4 +19,10 @@
 - X<sub>0</sub> is the empty sequence.
 - An LCS of two sequences contains within it an LCS of prefixes of the two sequences. Thus, the LCS problem has an optimal substructure property.
 
+#### Theorem 15.1 (Optimal Substructure of an LCS)
+- Let X = (x<sub>1</sub>, x<sub>2</sub>,...,x<sub>m</sub>) and Y = (y<sub>1</sub>, y<sub>2</sub>,...,y<sub>n</sub>) be sequences, and let Z = (z<sub>1</sub>, z<sub>2</sub>,...,z<sub>k</sub>) be any LCS of X and Y.
+    1. If x<sub>m</sub> = y<sub>n</sub>, then z<sub>k</sub> = x<sub>m</sub> = y<sub>n</sub> and Z<sub>k - 1</sub> is an LCS of X<sub>m - 1</sub> and Y<sub>n - 1</sub>.
+    2. If x<sub>m</sub> != y<sub>n</sub>, then z<sub>k</sub> != x<sub>m</sub> implies that Z is an LCS of X<sub>m - 1</sub> and Y.
+    3. If x<sub>m</sub> != y<sub>n</sub>, then z<sub>k</sub> != y<sub>n</sub> implies that Z is an LCS of X and Y<sub>n - 1</sub>.
+
 ## Step 2: A Recursive Solution
