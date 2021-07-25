@@ -7,6 +7,10 @@
     - Optimal solution to a problem contains optimal solutions to subproblems.
 - Like divide and conquer, DP solves problems by combining the solutions to subproblems.
 - Divide and conquer algorithms partition the problem into disjoint subproblems, solve them recursively, and combine their solutions to solve the problem.
+- Subproblems are not independent.
+    - Subproblems may share subsubproblems.
+    - However, solution to one subproblem may not affect the solutions to the other subproblems of the same problem.
+- Determine structure of optimal solutions.
 - **Dynamic Programming** applies when subproblems overlap. That is, when subproblems share subproblems.
     - Saves the subsubproblems answer in a table to avoid doing work again.
     - Typically applied to **optimization problems**.
