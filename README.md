@@ -30,3 +30,4 @@
     - [Longest Increasing Subsequence](./content/Algorithms/longest_increasing_subsequence.md)
     - [Edit Distance](./content/Algorithms/edit_distance.md)
     - [Subset Sum](./content/Algorithms/subset_sum.md)
+    - [Knapsack](./content/Algorithms/knapsack.md)
