@@ -16,4 +16,51 @@
 - Can we do better? Yes, with DP but we need to identify the subproblems.
 
 ## Defining a Subproblem
-- If items are labeled 1..n, then a subproblem would be to find an optimal solution for *S<sub>k</sub> = \{items labeled 1, 2,.. k\}}*.
+- If items are labeled 1..n, then a subproblem would be to find an optimal solution for *S<sub>k</sub> = \{items labeled 1, 2,.. k\}*.
+- This is a valid subproblem definition.
+- The question is: Can we describe the final solution *S<sub>n</sub>* in terms of subproblems *S<sub>k</sub>*?
+- Unfortunately, no we cannot. We need another one.
+- Add another parameter *w*, which will represent the *exact* weight for each subset of items.
+- The subproblem then will be to compute *B\[k, w\]*.
+
+- Below is the recursive formula:
+```
+B[k, w] = B[k - 1, w]                                               if wk > w
+
+        or
+
+        = max{B[k - 1, w], B[k - 1, w - wk] + bk}                   if wk <= w           
+```
+
+- In B\[k, w\], the *k* is the 1st *k* in our set S = \{1,.. k\}.
+- *w* is the weight.
+- The best subset of *S<sub>k</sub>* that has the total weight *w*, either contains item *k* or not.
+    - **First Case**: *w<sub>k</sub>* > *w*. Item *k* cannot be part of the solution, since if it was, the total weight would be > *w*. So, we select the "optimal" using items 1,.. *k* - 1.
+    - **Second Case**: *w<sub>k</sub>* <= *w*. Then the item *k* can be in the solution, and we choose the case with the greater value.
+        - It means: The best subset of *S<sub>k</sub>* that has total weight *w* is one of the two:
+            - **Do not use item k**: The best subset of *S<sub>k-1</sub>* that has total weight *w*.
+            - **Use item k**: The best subset of *S<sub>k-1</sub>* that has total weight *w* - *w<sub>k</sub>* plus the item *k* with benefit *b<sub>k</sub>*.
+
+## Pseudocode
+
+```
+1.  for w = 0 to W
+2.      B[0, w] = 0
+3.  for i = 0 to n                                          // Start with 1 item.
+4.      B[i, 0] = 0
+5.      for w = 0 to W                                      // Grow the weight of knapsack.
+6.          if wi <= w                                      // item i can be part of the solution.
+7.              if bi + B[i - 1, w - wi] > B[i - 1, w]      // Use it.
+8.                  B[i, w] = bi + B[i - 1, w - wi]
+9.              else                                        // Don't use it.
+10.                 B[i, w] = B[i - 1, w]
+11.         else B[i, w]= B[i - 1, w]                       // Doesn't fit.
+```
+
+- B\[n, W\] where *n* = all items and *W* = all capacity of knapsack.
+
+## Runtime
+- First for loop is *O(W)*.
+- Third for loop is *O(W)* and we repeat this 3rd loop *n* times because of our second for loop.
+- Runtime is *O(nW)* which is pseudo-polynomial.
+- Remember that brute force is *O(n2<sup>n</sup>)*. Better than brute force is *W* << 2<sup>n></sup>.
