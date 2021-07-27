@@ -64,3 +64,14 @@ B[k, w] = B[k - 1, w]                                               if wk > w
 - Third for loop is *O(W)* and we repeat this 3rd loop *n* times because of our second for loop.
 - Runtime is *O(nW)* which is pseudo-polynomial.
 - Remember that brute force is *O(n2<sup>n</sup>)*. Better than brute force is *W* << 2<sup>n></sup>.
+
+## Example 1
+
+- Use the data and run the algorithm above:
+
+- n = 4 (# of elements)
+- W = 5 (max weight)
+- Elements (weight, benefit): S = \{(2, 3), (3, 4), (4, 5), (5, 6)\}.
+
+0|1|2|3|4
+-|-|-|-|-
