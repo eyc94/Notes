@@ -16,4 +16,4 @@
 - Can we do better? Yes, with DP but we need to identify the subproblems.
 
 ## Defining a Subproblem
-- 
+- If items are labeled 1..n, then a subproblem would be to find an optimal solution for *S<sub>k</sub> = \{items labeled 1, 2,.. k\}}*.
