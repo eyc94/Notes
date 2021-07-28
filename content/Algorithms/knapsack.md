@@ -73,7 +73,6 @@ B[k, w] = B[k - 1, w]                                               if wk > w
 - W = 5 (max weight)
 - Elements (weight, benefit): S = \{(2, 3), (3, 4), (4, 5), (5, 6)\}.
 
-0 1 2 3 4
 -|-|-|-|-
 0|0|0|0|0
 0|3|3|3|3
