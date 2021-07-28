@@ -68,7 +68,6 @@ B[k, w] = B[k - 1, w]                                               if wk > w
 ## Example 1
 
 - Use the data and run the algorithm above:
-
 - n = 4 (# of elements)
 - W = 5 (max weight)
 - Elements (weight, benefit): S = \{(2, 3), (3, 4), (4, 5), (5, 6)\}.
