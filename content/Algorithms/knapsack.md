@@ -80,3 +80,9 @@ w = 1|0|3|3|3|3
 w = 2|0|3|4|4|4
 w = 3|0|3|4|5|5
 w = 4|0|3|7|7|7
+
+- This algorithm only finds the maximum possible value that can be carried in the knapsack.
+- To know the items that make this max value, an addition to this algorithm is necessary.
+- Running times of common DP problems:
+    - LCS: O(mn) vs O(n2<sup>m</sup>)
+    - 0-1 Knapsack: O(Wn) vs O(2<sup>n</sup>)
