@@ -19,3 +19,9 @@ Consider the activities below:
     - This is not a maximum subset.
 - The subset {*a<sub>1</sub>*, *a<sub>4</sub>*, *a<sub>8</sub>*, *a<sub>11</sub>*} is a maximum subset.
 - So is {*a<sub>2</sub>*, *a<sub>4</sub>*, *a<sub>9</sub>*, *a<sub>11</sub>*}.
+
+- First, start by thinking of a DP solution.
+- Then, develop a recursive greedy approach.
+- Then, convert recursive algorithm to an iterative one.
+
+## The Optimal Substructure of the Activity-Selection Problem
