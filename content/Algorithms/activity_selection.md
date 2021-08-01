@@ -14,3 +14,8 @@
 Consider the activities below:
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/activity_selection_table.png "Image of example of activities")
+
+- The subset {*a<sub>3</sub>*, *a<sub>9</sub>*, *a<sub>11</sub>*} consists of mutually compatible activities.
+    - This is not a maximum subset.
+- The subset {*a<sub>1</sub>*, *a<sub>4</sub>*, *a<sub>8</sub>*, *a<sub>11</sub>*} is a maximum subset.
+- So is {*a<sub>2</sub>*, *a<sub>4</sub>*, *a<sub>9</sub>*, *a<sub>11</sub>*}.
