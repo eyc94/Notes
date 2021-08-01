@@ -32,3 +32,4 @@
     - [Subset Sum](./content/Algorithms/subset_sum.md)
     - [Knapsack](./content/Algorithms/knapsack.md)
 - [Greedy Algorithms](./content/Algorithms/greedy_algorithms.md)
+    - [Activity-Selection Problem](./content/Algorithms/activity_selection.md)
