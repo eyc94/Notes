@@ -1,10 +1,11 @@
 # Greedy Algorithms
 
 - Solve optimization problems.
+- Usually DP is overkill, simpler algorithms will do.
 - Works by making the decision that seems the "best" or "most optimal" at any moment.
     - Never reconsiders this decision.
 - Simple & straightforward.
-- However, they are shortsighted because they make these decisions based on a "local optimal" rather than a "global optimal".
+- Makes a locally optimal choice in the hope that this choice will lead to a globally optimal solution.
 - Easy to design and implement.
 - Efficient most of the times.
 - Many problems cannot be solved **correctly** by the greedy approach.
