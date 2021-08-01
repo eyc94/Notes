@@ -5,3 +5,9 @@
 - Each activity *a<sub>i</sub>* has a **start time** *s<sub>i</sub>* and a **finish time** *f<sub>i</sub>*, where 0 ≤ *s<sub>i</sub>* < *f<sub>i</sub>* < ∞.
 - Selected activity, *a<sub>i</sub>*, takes place during half-open time interval \[*s<sub>i</sub>*, *f<sub>i</sub>*).
 - Activities *a<sub>i</sub>* and *a<sub>j</sub>* are **compatible** if the intervals \[*s<sub>i</sub>*, *f<sub>i</sub>*) and \[*s<sub>j</sub>*, *f<sub>j</sub>*) do not overlap.
+- *a<sub>i</sub>* and *a<sub>j</sub>* are compatible if *s<sub>i</sub>* ≥ *f<sub>j</sub>* or *s<sub>j</sub>* ≥ *f<sub>i</sub>*.
+    - Basically, one activity has to come and finish before the other to be non-overlapping.
+- In this problem, we want to select a maximum-size subset of mutually compatible activities.
+- Assume activities are sorted in monotonically increasing order of finish time.
+
+`*a<sub>j</sub>* `
