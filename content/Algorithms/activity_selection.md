@@ -9,5 +9,8 @@
     - Basically, one activity has to come and finish before the other to be non-overlapping.
 - In this problem, we want to select a maximum-size subset of mutually compatible activities.
 - Assume activities are sorted in monotonically increasing order of finish time.
+    - *f<sub>1</sub>* ≤ *f<sub>2</sub>* ≤ *f<sub>3</sub>* ≤ ... ≤ *f<sub>n - 1</sub>* ≤ *f<sub>n</sub>*.
 
-`*a<sub>j</sub>* `
+Consider the activities below:
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/activity_selection_table.png "Image of example of activities")
