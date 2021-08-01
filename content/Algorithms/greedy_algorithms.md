@@ -9,3 +9,10 @@
 - Efficient most of the times.
 - Many problems cannot be solved **correctly** by the greedy approach.
 - Important to determine which problems can be solved by a greedy approach.
+
+## Some problems
+- Knapsack
+- Activity Selection/Scheduling
+- Job Scheduling
+- Coin Change Making
+- Huffman Codes
