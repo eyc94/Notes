@@ -45,3 +45,22 @@ RECURSIVE-ACTIVITY-SELECTOR(s, f, k, n)
 5.      return {a_m} U RECURSIVE-ACTIVITY-SELECTOR(s, f, m, n)
 6.  else return 0
 ```
+
+- Assuming that the activities are already sorted by increasing finish time, the runtime is &Theta;(N).
+
+## An Iterative Greedy Algorithm
+
+```
+GREEDY-ACTIVITY-SELECTOR(s, f)
+1.  n = s.length
+2.  A = {a_1}
+3.  k = 1
+4.  for m = 2 to n
+5.      if s[m] ≥ f[k]
+6.          A = A U {a_m}
+7.          k = m
+8.  return A
+```
+
+- Assume activities are ordered by increasing finish time.
+- Runtime is also &Theta;(N) time.
