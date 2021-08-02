@@ -34,3 +34,5 @@
 - [Greedy Algorithms](./content/Algorithms/greedy_algorithms.md)
     - [Elements of the Greedy Strategy](./content/Algorithms/greedy_elements.md)
     - [Activity-Selection Problem](./content/Algorithms/activity_selection.md)
+    - [Fractional Knapsack](./content/Algorithms/fractional_knapsack.md)
+    - [Huffman Codes](./content/Algorithms/huffman_codes.md)
