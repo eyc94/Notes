@@ -24,3 +24,24 @@ Consider the activities below:
 - Then, convert recursive algorithm to an iterative one.
 
 ## The Optimal Substructure of the Activity-Selection Problem
+
+- *S<sub>ij</sub>* is the set of activities that start after *a<sub>i</sub>* finishes and that finish before *a<sub>j</sub>* starts.
+- We want to find a maximum set of mutually compatible activities in *S<sub>ij</sub>*.
+    - A maximum set is *A<sub>ij</sub>* that includes activity *a<sub>k</sub>*.
+- Including *a<sub>k</sub>* in an optimal solution leaves us with two subproblems.
+    - Find mutually compatible activities in the set *S<sub>ik</sub>* (activities that start after *a<sub>i</sub>* finishes and finish before *a<sub>k</sub>* starts).
+    - Find mutually compatible activities in the set *S<sub>kj</sub>* (activities that start after *a<sub>k</sub>* finishes and finish before *a<sub>j</sub>* starts).
+
+## Making the Greedy Choice
+
+## A Recursive Greedy Algorithm
+
+```
+RECURSIVE-ACTIVITY-SELECTOR(s, f, k, n)
+1.  m = k + 1
+2.  while m ≤ n and s[m] < f[k]
+3.      m = m + 1
+4.  if m ≤ n
+5.      return {a_m} U RECURSIVE-ACTIVITY-SELECTOR(s, f, m, n)
+6.  else return 0
+```
