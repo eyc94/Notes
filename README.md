@@ -36,3 +36,4 @@
     - [Activity-Selection Problem](./content/Algorithms/activity_selection.md)
     - [Fractional Knapsack](./content/Algorithms/fractional_knapsack.md)
     - [Huffman Codes](./content/Algorithms/huffman_codes.md)
+    - [Coin Change](./content/Algorithms/coin_change.md)
