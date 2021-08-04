@@ -41,3 +41,4 @@
     - [Breadth-First Search](./content/Algorithms/graph_bfs.md)
     - [Depth-First Search](./content/Algorithms/graph_dfs.md)
     - [Topological Sort](./content/Algorithms/topological_sort.md)
+    - [Strongly Connected Components](./content/Algorithms/strongly_connected_components.md)
