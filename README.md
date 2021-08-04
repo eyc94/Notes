@@ -39,3 +39,4 @@
     - [Coin Change](./content/Algorithms/coin_change.md)
 - [Graph Algorithms](./content/Algorithms/graph_algorithms.md)
     - [Breadth-First Search](./content/Algorithms/graph_bfs.md)
+    - [Depth-First Search](./content/Algorithms/graph_dfs.md)
