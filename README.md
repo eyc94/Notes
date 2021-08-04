@@ -42,3 +42,5 @@
     - [Depth-First Search](./content/Algorithms/graph_dfs.md)
     - [Topological Sort](./content/Algorithms/topological_sort.md)
     - [Strongly Connected Components](./content/Algorithms/strongly_connected_components.md)
+    - [Minimum Spanning Trees](./content/Algorithms/minimum_spanning_trees.md)
+    
