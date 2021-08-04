@@ -31,3 +31,8 @@ BFS(G,s)
 17.             ENQUEUE(Q,v)
 18.     u.color = BLACK
 ```
+
+- Uses adjacency list above.
+- Store color of each vertex u ∈ V in the attribute u.color and parent of u in the attribute u.π.
+- u.d holds the distance from the source *s* to vertex *u*.
+- Algorithm uses a FIFO queue *Q* to manage set of vertices.
