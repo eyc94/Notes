@@ -40,3 +40,12 @@ BFS(G,s)
 - Below illustrates BFS on a sample graph.
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/bfs_process.png "Graph of BFS on a sample graph")
+
+## Analysis
+- The operations of enqueuing and dequeuing take O(1) time.
+- Total time devoted to queue operations is O(V).
+- Scans each adjacency list at most once.
+- Total time spent ins scanning adjacency lists is O(E) because the length of all adjacency lists is &Theta;(E).
+- Overhead for initialization is O(V).
+- Total running time of BFS procedure is O(V + E).
+- BFS runs in time linear in the size of the adjacency-list representation of *G*.
