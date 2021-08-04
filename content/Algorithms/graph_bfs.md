@@ -36,3 +36,7 @@ BFS(G,s)
 - Store color of each vertex u ∈ V in the attribute u.color and parent of u in the attribute u.π.
 - u.d holds the distance from the source *s* to vertex *u*.
 - Algorithm uses a FIFO queue *Q* to manage set of vertices.
+
+- Below illustrates BFS on a sample graph.
+
+![alt text](https://github.com/eyc94/Notes/blob/master/images/bfs_process.png "Graph of BFS on a sample graph")
