@@ -49,3 +49,7 @@ BFS(G,s)
 - Overhead for initialization is O(V).
 - Total running time of BFS procedure is O(V + E).
 - BFS runs in time linear in the size of the adjacency-list representation of *G*.
+
+## Shortest Paths
+- Define the **shortest-path distance** &delta;(s,v) from *s* to *v* as the minimum number of edges in any path from vertex *s* to vertex *v*.
+- If there is no path from *s* to *v*, then &delta;(s,v) = ∞.
