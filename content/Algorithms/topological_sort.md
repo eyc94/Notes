@@ -20,3 +20,4 @@ TOPOLOGICAL-SORT(G)
 3.  return the linked list of vertices
 ```
 
+- Runtime: &Theta;(V + E) because DFS takes &Theta;(V + E) time and it takes O(1) time to insert each of the |V| vertices onto the front of the linked list.
