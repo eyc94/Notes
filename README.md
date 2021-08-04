@@ -40,3 +40,4 @@
 - [Graph Algorithms](./content/Algorithms/graph_algorithms.md)
     - [Breadth-First Search](./content/Algorithms/graph_bfs.md)
     - [Depth-First Search](./content/Algorithms/graph_dfs.md)
+    - [Topological Sort](./content/Algorithms/topological_sort.md)
