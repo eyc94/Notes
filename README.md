@@ -44,4 +44,5 @@
     - [Strongly Connected Components](./content/Algorithms/strongly_connected_components.md)
     - [Minimum Spanning Trees](./content/Algorithms/minimum_spanning_trees.md)
         - [Generic Minimum Spanning Tree](./content/Algorithms/generic_mst)
-        - []
+        - [Kruskal's Algorithm](./content/Algorithms/kruskal.md)
+        - [Prims's Algorithm](./content/Algorithms/prim.md)
