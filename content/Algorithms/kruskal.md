@@ -27,3 +27,13 @@ MST-KRUSKAL(G,w)
 
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/kruskal_example_one.png "Image of an example of kruskal's algorithm")
 ![alt text](https://github.com/eyc94/Notes/blob/master/images/kruskal_example_two.png "Image of an example of kruskal's algorithm")
+
+- Running time depends on how the disjoint-set data structure is implemented.
+- Initializing set *A* in line 1 takes O(1) time.
+- Time to sort the edges in line 4 is O(E lg E).
+- The for loop of lines 5-8 performs O(E) FIND-SET and UNION operations on the disjoint-set forest.
+- |V| MAKE-SET operations.
+- Total is O((V + E)&alpha;(V)) time.
+- Assume *G* is connected, so we have |E| >= |V| - 1. The disjoint-set operations take O(E&alpha;(V)) time.
+- Total running time is O(E lg E).
+- Can restate to O(E lg V).
