@@ -48,3 +48,4 @@
         - [Prims's Algorithm](./content/Algorithms/prim.md)
     - [Single-Source Shortest Paths](./content/Algorithms/shortest_paths.md)
         - [Single-Source Shortest Paths in Directed Acyclic Graphs](./content/Algorithms/shortest_path_dags.md)
+        - [Dijkstra's Algorithm](./content/Algorithms/dijkstra.md)
